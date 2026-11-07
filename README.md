@@ -4,6 +4,10 @@ A mobile-first, interactive birthday surprise you can send to a friend as a sing
 
 Plain **HTML + CSS + JavaScript**. No framework, no build step, no backend.
 
+### 🔗 Live demo: **[adityaraj8118.github.io/birthday-surprise-website](https://adityaraj8118.github.io/birthday-surprise-website/)**
+
+📱 Phone pe kholo, best experience wahi hai. 🎵 Sound on rakhna.
+
 ![Preview](docs/preview.jpg)
 
 ## ✨ Features
