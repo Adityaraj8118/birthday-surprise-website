@@ -12,7 +12,7 @@ Plain **HTML + CSS + JavaScript**. No framework, no build step, no backend.
 |---|---|
 | 1. Secret Mission | Animated envelope, "Mission Accept karo" button, starts background music |
 | 2. Verification | 3 funny questions. The **"Nahi"** button shows a new message on every tap (23 in total), then disappears 😄 |
-| 3. Cake Reveal | Tap the cake → candles blow out → confetti + "Happy Birthday {name}" |
+| 3. Cake Reveal | Tap the cake → candles blow out → confetti + "Happy Birthday [Friend's Name]" |
 | 4. Scrapbook | Polaroid-style photo gallery with captions, full-screen viewer with swipe |
 | 5. Awards | Flip cards with funny personalised awards |
 | 6. Friendship Quiz | 4 questions with score, right/wrong reactions |
@@ -26,24 +26,33 @@ Also included:
 - Self-hosted fonts (Baloo 2, Poppins, Caveat), so nothing is loaded from third-party servers
 - Tested on a 390 × 844 phone viewport: no horizontal scroll, no console errors
 
-## 🛠️ Make it your own (3 steps)
+## 🔧 Yahan changes karne hain (Customize checklist)
 
-**1. Names:** open `js/data.js` and change the first two lines:
-```js
-name: "Your Friend",   // birthday person's name
-from: "Your Name",     // your name
-```
-Every `{name}` and `{from}` in the texts is replaced automatically.
+Is project mein koi real naam ya personal detail nahi hai. Jahan bhi aapko apni details daalni hain, wahan **`[Square bracket]`** wala placeholder hai, aur code mein **`[CHANGE]`** comment laga hai. Lagbhag saara kaam sirf **`js/data.js`** mein hai.
 
-**2. Photos:** put your photos in `assets/images/` (full size) and a smaller copy (~640 px) in `assets/thumbs/` with the **same file name**. Then list them in `photos: [...]` inside `js/data.js`:
-```js
-{ file: "photo-01.jpg", caption: "Your caption 😄", alt: "Short description" },
-```
-Add `funny: true` to show a "LOL 😂" tag. You can use any number of photos.
+| # | Kya badalna hai | File → jagah | Abhi kya likha hai |
+|---|---|---|---|
+| 1 | **Dost ka naam** (website pe har jagah apne aap aa jayega) | `js/data.js` → `name` | `[Friend's Name]` |
+| 2 | **Aapka naam** (letter ke neeche, quiz, messages) | `js/data.js` → `from` | `[Your Name]` |
+| 3 | **Photos** | `assets/images/` + `assets/thumbs/` | 10 placeholder images: "Your photo here" |
+| 4 | **Photo captions** | `js/data.js` → `photos` | Sample funny captions |
+| 5 | **Pehli mulaqat wala quiz sawaal** | `js/data.js` → `quiz` (pehla sawaal) | `[Jahan pehli baar mile — sahi jawab]`, `[Galat option 1]`, `[Galat option 2]` |
+| 6 | **Letter mein aapki special yaad** | `js/data.js` → `letter` | `[Yahan apni ek special yaad likho …]` |
+| 7 | Baaki letter, quiz, awards *(optional)* | `js/data.js` → `letter`, `quiz`, `awards` | Generic sample text |
+| 8 | Background music *(optional)* | `assets/audio/music.mp3` | Original lofi tune; apna gaana isi naam se replace karo |
 
-**3. Text:** edit the awards, quiz questions, letter and secret messages in the same `js/data.js` file.
+**Tip:** `{name}` aur `{from}` ko mat badalna. Ye apne aap #1 aur #2 se replace ho jaate hain.
 
-Optional: replace `assets/audio/music.mp3` with your own song (keep the same file name).
+Badlav ke baad search karke check karo ki koi placeholder bacha to nahi (VS Code: `Ctrl + Shift + F`, search: `[CHANGE]` aur `[`).
+
+### Photos kaise daalein
+1. Apni photos `assets/images/` mein daalo (full size) aur unki chhoti copy (~640 px) `assets/thumbs/` mein, **same file name** ke saath.
+2. `js/data.js` ki `photos` list mein har photo ki ek line rakho:
+   ```js
+   { file: "photo-01.jpg", caption: "Your caption 😄", alt: "Short description" },
+   ```
+   `funny: true` lagane se photo pe "LOL 😂" tag aata hai. Photos ki koi limit nahi hai.
+3. Purani placeholder files (`photo-01.jpg` … `photo-10.jpg`) delete kar do, ya unhi naamon se apni photos rakh do.
 
 ## ▶️ Run locally
 

@@ -1,15 +1,20 @@
 // =====================================================================
 //  CUSTOMIZE HERE — saara text aur photos isi file se aate hain.
-//  {name} = birthday wale dost ka naam, {from} = aapka naam.
-//  Ye dono har jagah apne aap replace ho jaate hain.
+//
+//  [Square bracket] wali har cheez apni details se badlo.
+//  Poori list: README.md → "Yahan changes karne hain".
+//
+//  {name} aur {from} ko mat chhedna — ye apne aap neeche wale
+//  name / from se replace ho jaate hain.
 // =====================================================================
 
 window.SITE = {
-  name: "Your Friend",   // 👈 birthday person ka naam
-  from: "Your Name",     // 👈 aapka naam
+  name: "[Friend's Name]",   // 👈 [CHANGE] birthday wale dost ka naam
+  from: "[Your Name]",       // 👈 [CHANGE] aapka naam
 
   revealNote: "(poore dil se 💖)",
 
+  // 👇 [CHANGE] Photos: apni photos daalo aur captions badlo
   // Photos: assets/images/ (full size) + assets/thumbs/ (small, ~640px)
   // w/h = thumb ka size (optional, layout jump se bachata hai)
   photos: [
@@ -25,6 +30,7 @@ window.SITE = {
     { file: "photo-10.jpg", w: 480, h: 640, caption: "Selfie mode: ON · Smile mode: FULL 📸", alt: "Sample photo 10" }
   ],
 
+  // 👇 [OPTIONAL] Awards apne dost ki aadaton ke hisaab se badlo
   awards: [
     { icon: "🧳", title: "Professional Ghumakkad", desc: "Ghar pe baithna? Impossible. Roz kahin na kahin jaana hi hai." },
     { icon: "⚡", title: "Bore Hone ki Speed — World Champion", desc: "5 minute mein bore ho jaana koi inse seekhe." },
@@ -87,11 +93,12 @@ window.SITE = {
     }
   ],
 
-  // Screen 6: Dosti ka test (apne sawaal-jawab yahan daalo)
+  // 👇 [CHANGE] Screen 6: Dosti ka test (apne sawaal-jawab yahan daalo)
   quiz: [
     {
+      // 👇 [CHANGE] apni sahi jagah + 2 galat options likho. answer = sahi option ka number (0 se shuru)
       q: "Hum dono pehli baar kahan mile the? 🤔",
-      options: ["School", "College", "Office", "Yaad nahi 😅"],
+      options: ["[Jahan pehli baar mile — sahi jawab]", "[Galat option 1]", "[Galat option 2]", "Yaad nahi 😅"],
       answer: 0,
       right: "Sahi jawab! Wahan se shuru hui ye kahani 💫",
       wrong: "Galat! Itni jaldi bhool gaye? 😏"
@@ -126,10 +133,11 @@ window.SITE = {
     "…achha theek hai, aakhri: tum bahut special ho. Ab sach mein jao 💖"
   ],
 
-  // Final letter — HTML allowed (<p>, <br>, <strong>, <em>)
+  // 👇 [CHANGE] Final letter — apne shabdon mein likho. HTML allowed (<p>, <br>, <strong>, <em>)
   letter: `
     <p>Dear {name},</p>
     <p>Socha is baar sirf ek “Happy Birthday” message nahi bhejunga — kuch aisa banaunga jo sirf tumhare liye ho. To ye lo, ek poori chhoti si duniya, sirf tumhare liye. 🎁</p>
+    <p>[Yahan apni ek special yaad likho — jaise aap pehli baar kaise mile, koi funny moment, ya koi inside joke.]</p>
     <p>Itne saalon mein bahut kuch badla, par tumhari masti, tumhara drama aur tumhari hansi bilkul wahi ki wahi hai. 😄</p>
     <p>Kuch log bina koshish ke ordinary din ko special bana dete hain — tum unmein se ho. Thank you, hamesha saath rehne ke liye.</p>
     <p>Hamesha aise hi ghoomte raho, hanste raho, aur khush raho. ✨</p>

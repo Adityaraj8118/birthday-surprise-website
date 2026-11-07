@@ -19,7 +19,8 @@
     el.textContent = S.name;
     if (S.name.length > 7) el.classList.add("long"); // lambe naam ke liye chhota font
   });
-  $("#sealInitial").textContent = (S.name.trim()[0] || "♥").toUpperCase();
+  var initial = S.name.match(/[A-Za-z\u0900-\u097F]/); // brackets/emoji skip karke pehla letter
+  $("#sealInitial").textContent = initial ? initial[0].toUpperCase() : "♥";
   $("#revealNote").textContent = S.revealNote || "";
 
   /* ---------------- Stars ---------------- */
